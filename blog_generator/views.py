@@ -81,7 +81,7 @@ def download_audio(link):
 
 def get_transcription(link):
     audio_file = download_audio(link)
-    aai.settings.api_key = "d176ed34dfc548d8b644101f839f56a1"
+    aai.settings.api_key = "AAI_KEY"
 
     transcriber = aai.Transcriber()
     transcript = transcriber.transcribe(audio_file)
@@ -91,7 +91,7 @@ def get_transcription(link):
 def generate_blog_from_transcription(title, transcription):
     client = InferenceClient(
         model="meta-llama/Meta-Llama-3-8B-Instruct",
-        token="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",
+        token="HF_Token",
     )
 
     prompt = (
